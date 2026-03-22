@@ -116,6 +116,63 @@
       </ul>
     </section>
 
+    <!-- PRICING -->
+    <section class="section pricing">
+      <h2 class="section__title">Стоимость</h2>
+      <div class="pricing__grid">
+
+        <div class="pricing-card">
+          <div class="pricing-card__header">
+            <h3 class="pricing-card__title">Индивидуальное занятие</h3>
+            <p class="pricing-card__korean">개인 수업</p>
+          </div>
+          <div class="pricing-card__price">
+            <span class="pricing-card__amount">2 300 ₽</span>
+            <span class="pricing-card__per">/ 60 мин</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li>Персональная программа</li>
+            <li>Гибкое расписание</li>
+            <li>Домашние задания с обратной связью</li>
+          </ul>
+        </div>
+
+        <div class="pricing-card pricing-card--accent">
+          <div class="pricing-card__badge">Популярное</div>
+          <div class="pricing-card__header">
+            <h3 class="pricing-card__title">Пакет 8 занятий</h3>
+            <p class="pricing-card__korean">8회 수업 패키지</p>
+          </div>
+          <div class="pricing-card__price">
+            <span class="pricing-card__amount">17 600 ₽</span>
+            <span class="pricing-card__per">2 200 ₽ / занятие</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li>Выгоднее на 100 ₽ за урок</li>
+            <li>Фиксированное место в расписании</li>
+            <li>Конспекты и материалы в подарок</li>
+          </ul>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-card__header">
+            <h3 class="pricing-card__title">Разговорный клуб</h3>
+            <p class="pricing-card__korean">회화 클럽</p>
+          </div>
+          <div class="pricing-card__price">
+            <span class="pricing-card__amount">800 ₽</span>
+            <span class="pricing-card__per">/ 60 мин</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li>Мини-группа до 4 человек</li>
+            <li>Живая практика на корейском</li>
+            <li>Интересные темы каждую неделю</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
     <!-- CTA PRIMARY -->
     <section class="section cta-section">
       <a href="https://t.me/#ССЫЛКА" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
@@ -179,6 +236,22 @@
     </footer>
 
   </div>
+
+  <script>
+    // Scroll reveal animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.section').forEach(el => {
+      el.classList.add('fade-in');
+      observer.observe(el);
+    });
+  </script>
 
 </body>
 </html>
